@@ -22,4 +22,9 @@ public class ExpressionTest {
         Expression exp = new Expression(new Expression(2d),new Expression(3d),new Multiplication());
         assertEquals(6d , exp.evaluate(),0.0);
     }
+    @Test
+    public void testEvaluateWillDivideFirstOperandBySecondOperand() throws Exception {
+        Expression exp = new Expression(new Expression(6d),new Expression(3d),new division());
+        assertEquals(2d , exp.evaluate(),0.0);
+    }
 }
