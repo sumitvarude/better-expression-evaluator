@@ -17,4 +17,9 @@ public class ExpressionTest {
         assertEquals(7d , exp.evaluate(),0.0);
     }
 
+    @Test
+    public void testEvaluateWillMultiplyTwoOperands() throws Exception {
+        Expression exp = new Expression(new Expression(2d),new Expression(3d),new Multiplication());
+        assertEquals(6d , exp.evaluate(),0.0);
+    }
 }
